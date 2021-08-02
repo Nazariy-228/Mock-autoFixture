@@ -33,12 +33,8 @@ namespace test
           [Frozen] Mock<ICartService> cartServiceMock, 
           [Frozen] Mock<ICard> cardMock, 
           [Frozen] Mock<IAddressInfo> addressInfoMock,
-          [Frozen] Mock<CartItem> cartItemMock, 
-          List<CartItem> items)
-      {
-          cartItemMock.Setup(item => item.Price)
-              .Returns(20);
-          
+          List<ICartItem> items)
+      {   
           cartServiceMock.Setup(c => c.Items())
               .Returns(items.AsEnumerable());
           
@@ -67,12 +63,8 @@ namespace test
           [Frozen] Mock<ICartService> cartServiceMock, 
           [Frozen] Mock<ICard> cardMock, 
           [Frozen] Mock<IAddressInfo> addressInfoMock,
-          [Frozen] Mock<CartItem> cartItemMock, 
-          List<CartItem> items)
+          List<ICartItem> items)
       {
-          cartItemMock.Setup(item => item.Price)
-              .Returns(20);
-          
           cartServiceMock.Setup(c => c.Items())
               .Returns(items.AsEnumerable());
           

@@ -18,7 +18,7 @@ namespace Services
         public DateTime ValidTo { get; set; }
     }
 
-    public interface CartItem 
+    public interface ICartItem 
     {
         public string ProductId { get; set; }
         public int Quantity { get; set; }
